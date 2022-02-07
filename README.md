@@ -1,4 +1,4 @@
-# Laporan Proyek Machine Learning - Nama Anda
+# Laporan Proyek Machine Learning - Sulaiman Muharik
 
 ## Domain Proyek
 
@@ -18,19 +18,15 @@ Bagian laporan ini mencakup:
 
 ### Problem Statements
 
-Menjelaskan pernyataan masalah latar belakang:
-- Pernyataan Masalah 1
-- Pernyataan Masalah 2
-- Pernyataan Masalah n
+- Dari serangkaian fitur, fitur apa saja yang berpengaruh pada keberhasilan produksi?
+- Dari serangkaian fitur, fitur apa yang paling berkorelasi pada keberhasilan produksi? 
+- Bagaimana keberhasilan produksi dengan fitur tertentu?
 
 ### Goals
 
-Menjelaskan tujuan dari pernyataan masalah:
-- Jawaban pernyataan masalah 1
-- Jawaban pernyataan masalah 2
-- Jawaban pernyataan masalah n
-
-Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
+- Mengetahui fitur-fitur yang berpengaruh dengan keberhasilan produksi.
+- Mengetahui fitur yang paling berkolerasi dengan keberhasilan produksi.
+- Membuat model machine learning yang dapat memprediksi keberhasilan produksi seakurat mungkin dengan fitur-fitur yang ada.
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Menambahkan bagian “Solution Statement” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut: 
@@ -40,20 +36,26 @@ Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pe
     - Solusi yang diberikan harus dapat terukur dengan metrik evaluasi.
 
 ## Data Understanding
-Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Restaurant+%26+consumer+data).
+(Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. Sertakan juga sumber atau tautan untuk mengunduh dataset.)
+[UCI SECOM Dataset](https://www.kaggle.com/paresh2047/uci-semcom).
 
-Selanjutnya uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:  
+(Selanjutnya uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:)
 
-### Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
-- accepts : merupakan jenis pembayaran yang diterima pada restoran tertentu.
-- cuisine : merupakan jenis masakan yang disajikan pada restoran.
-- dst
+### Variabel-variabel pada UCI SECOM dataset:
+Data memiliki 2 file, file dataset SECOM terdiri dari 1567 contoh masing-masing dengan 591 fitur, matriks 1567 x 591, dan file label yang berisi klasifikasi dan cap waktu untuk setiap contoh.
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
 
 ## Data Preparation
-Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
+(Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.)
+- Dropping unnecessary feature.
+- Handling missing value.
+- Handling 0 variation.
+- Pairwise correlation.
+- Correlation with target.
+- Pembagian dataset dengan fungsi train_test_split dari library sklearn.
+- Standarisasi.
 
 **Rubrik/Kriteria Tambahan (Opsional)**: 
 - Menjelaskan proses data preparation yang dilakukan
