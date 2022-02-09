@@ -59,7 +59,7 @@ Pada kasus klasifikasi ini, metrik evaluasi yang digunakan adalah akurasi, preci
 - Recall adalah perbandingan antara hasil positif yang benar dengan banyaknya data yang sebenarnya positif. Recall = TP/(TP+FN).
 - F1-Score adalah rata-rata harmonik dari precision dan recall, di mana nilai F1-Score yang ideal adalah 1 dan nilai terburuknya adalah 0. F1-Score yang baik mengindikasikan bahwa model memiliki precision dan recall yang baik. 
 
-Algoritma Boosting merupakan algoritma yang terbaik pada proyek ini karena memiliki akurasi dan precision yang terbaik diantara 3 algoritma lainnya.
+Algoritma Boosting merupakan algoritma yang terbaik pada proyek ini karena memiliki akurasi dan precision yang terbaik diantara 3 algoritma lainnya. Fitur yang paling berpengaruh pada algoritma ini adalah fitur 90.
 
 
 **---Ini adalah bagian akhir laporan---**
