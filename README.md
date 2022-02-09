@@ -10,6 +10,7 @@ Proses manufaktur semikonduktor modern yang kompleks biasanya berada di bawah pe
   
   Format Referensi: 
   [Using CRISP-DM to Predict Car Prices](https://medium.com/@christophberns/using-crisp-dm-to-predict-car-prices-f15eb5b14025) 
+  [Komponen Model Evaluasi](https://docs.microsoft.com/id-id/azure/machine-learning/component-reference/evaluate-model#metrics-for-classification-models)
 
 ## Business Understanding
 
@@ -70,7 +71,13 @@ Algoritma yang digunakan pada permasalahan ini adalah KNN, Random Forest, dan Bo
 - Jika menggunakan dua atau lebih algoritma pada solution statement, maka pilih model terbaik sebagai solusi. **Jelaskan mengapa memilih model tersebut sebagai model terbaik**.
 
 ## Evaluation
-Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
+(Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.)
+
+Pada kasus klasifikasi ini, metrik evaluasi yang digunakan adalah akurasi, precision, recall, dan F1-Score.
+- Akurasi mengukur kebaikan model sebagai proporsi hasil yang benar terhadap total kasus.
+- Precision adalah perbandingan antara hasil positif yang benar dengan banyaknya data yang diprediksi positif. Presisi = TP/(TP+FP).
+- Recall adalah perbandingan antara hasil positif yang benar dengan banyaknya data yang sebenarnya positif. Recall = TP/(TP+FN).
+- F1-Score adalah rata-rata harmonik dari precision dan recall, di mana nilai skor F1 yang ideal adalah 1 dan nilai terburuknya adalah 0. F1_Score yang baik mengindikasikan bahwa model memiliki precision dan recall yang baik. 
 
 Sebagai contoh, Anda memiih kasus klasifikasi dan menggunakan metrik **akurasi, precision, recall, dan F1 score**. Jelaskan mengenai beberapa hal berikut:
 - Penjelasan mengenai metrik yang digunakan
