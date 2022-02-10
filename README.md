@@ -19,10 +19,6 @@ Proses manufaktur semikonduktor modern yang kompleks biasanya berada di bawah pe
 - Mengetahui fitur yang paling berkolerasi dengan keberhasilan produksi.
 - Membuat model machine learning yang dapat memprediksi keberhasilan produksi seakurat mungkin dengan fitur-fitur yang ada.
 
-### Solution statements
-- Memilih fitur-fitur yang beerpengaruh untuk memudahkan mesin belajar.
-- Menggunakan beberapa model algoritma untuk mencapai solusi yang diinginkan.
-
 
 ## Data Understanding
 
@@ -36,13 +32,6 @@ File dataset SECOM terdiri dari 1567 contoh masing-masing memiliki 591 fitur, la
 
 ## Data Preparation
 
-- Drop unnecessary features. 
-- Drop feature with 0 variance.
-- Handling missing value.
-- Fill missing value
-- Pairwise correlation.
-- Correlation with target.
-
 - Pembersihan data.
 - Pemilihan fitur.
 - Pembagian dataset dengan fungsi train_test_split dari library sklearn.
@@ -53,7 +42,16 @@ Pada proses pembersihan data, dilakukan 2 tahap yaitu mendrop fitur yang tidak d
 
 ## Modeling
 
-Algoritma yang digunakan pada permasalahan ini adalah SVM, KNN, Random Forest, dan Boosting. Keempat algoritma tersebut merupakan algoritma yang dapat digunakan untuk melakukan klasifikasi biner. Akurasi yang didapatkan pada ketiga algoritma tersebut adalah 92.36%, 92.04%, 92.36%, dan 92.99% secara berurutan. Dari keempat algortima tersebut didapatkan model yang memiliki akurasi terbaik yang dipilih sebagai model terbaik dangan akurasi 92.99% yaitu algoritma Boosting.
+Algoritma yang digunakan pada permasalahan ini adalah SVM, KNN, Random Forest, dan Boosting. Keempat algoritma tersebut merupakan algoritma yang dapat digunakan untuk melakukan klasifikasi biner. Akurasi yang didapatkan pada keempat algoritma adalah sebagai berikut:
+
+||train_acc|test_acc|
+|---|---|---|
+|SVM|0.94092|0.923567|
+|KNN|0.935355|0.920382|
+|RandomForest|1.0|0.923567|
+|Boosting|0.950519|0.929936|
+
+Algoritma RandomForest memiliki akurasi latih yang paling baik di antara yang lain, tetapi jarak antara akurasi latih dengan akurasi uji sangat jauh, maka dapat dikatakan terjadi overfitting pada model ini. Pada Algoritma, didapatkan akurasi uji yang terbaik dan akurasi latih terbaik kedua di antara yang lain dan jarak antara akurasi latih dan akurasi uji tidak begitu besar. Jadi, dari keempat algortima tersebut didapatkan model yang dipilih sebagai model terbaik dangan akurasi 92.99% yaitu algoritma Boosting.
 
 
 ## Evaluation
@@ -70,7 +68,6 @@ Classification Report
 | -1 | 0.94 | 0.99 | 0.96 |
 | 1 | 0.62 | 0.21 | 0.31 |
 | accuracy |  |  | 0.93 |
-
 
 Algoritma Boosting merupakan algoritma yang terbaik pada proyek ini karena memiliki akurasi dan precision yang terbaik diantara 3 algoritma lainnya. Fitur yang paling berpengaruh pada algoritma ini adalah fitur 90.
 
