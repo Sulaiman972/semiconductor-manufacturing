@@ -32,13 +32,32 @@ File dataset SECOM terdiri dari 1567 contoh masing-masing memiliki 591 fitur, la
 
 ## Data Preparation
 
+Pada dataset masih terdapat kolom yang tidak diperlukan untuk membuat model terdapat pula fitur-fitur yang memiliki nilai hanya satu atau memiliki variasi data 0 dan memiliki missing value yang banyak. Dataset juga memiliki banyak fitur yang akan membuat model sulit untuk belajar. Oleh karena itu, perlu dilakukan data preparation pada dataset.
+
 - Pembersihan data.
+
+  Pada proses pembersihan data, dilakukan 2 tahap yaitu mendrop fitur yang tidak dibutuhkan atau berpengaruh dan menangani missing value. 
+  - Kolom Time di-drop karena tidak dibutuhkan pada kasus ini, dan 
+  - Fitur yang memiliki variasi data 0 di-drop karena tidak memberikan informasi apapun.
+
+  Kemudian dalam menangani missing value, 
+  - Fitur yang memiliki missing value lebih dari 20% di-drop agar model tidak keliru, dan 
+  - Mengisi missing value untuk memudahkan mesin belajar.
+
 - Pemilihan fitur.
+
+  Pada proses pemilihan fitur, 
+  - Pairwise correlation dengan threshold 0.7 dilakukan untuk mengurangi fitur yang memiliki sifat yang mirip atau sama, dan 
+  - Membuang fitur yang memiliki korelasi sangat kecil dengan target (Pass/Fail) dengan threshold 0.05 untuk mengurangi fitur yang kurang berpengaruh terhadap target.
+
 - Pembagian dataset dengan fungsi train_test_split dari library sklearn.
+
+  Pembagian dataset menjadi data train dan test perlu dilakukan untuk menguji model pada data test, dengan model yang telah dilatih pada data train.
+
 - Standarisasi.
 
-Pada proses pembersihan data, dilakukan 2 tahap yaitu mendrop fitur yang tidak dibutuhkan atau berpengaruh dan menangani missing value. Kolom Time di-drop karena tidak dibutuhkan pada kasus ini dan fitur yang memiliki variasi data 0 di-drop karena tidak memberikan informasi apapun. Kemudian dalam menangani missing value, fitur yang memiliki missing value lebih dari 20% di-drop agar model tidak keliru dan mengisi missing value untuk memudahkan mesin belajar. Pada proses pemilihan fitur, dilakukan pairwise correlation dengan threshold 0.7 dilakukan untuk mengurangi fitur yang memiliki sifat yang mirip atau sama dan membuang fitur yang memiliki korelasi sangat kecil dengan target (Pass/Fail) dengan threshold 0.05. Tahap selanjutnya adalah membagi dataset menjadi train dan test. Kemudian melakukan standarisasi untuk memudahkan mesin belajar. 
-
+  Standarisasi dilakukan agar data menjadi mudah diolah oleh algoritma.
+  
 
 ## Modeling
 
@@ -62,7 +81,7 @@ Pada kasus klasifikasi ini, metrik evaluasi yang digunakan adalah akurasi, preci
 - Recall adalah perbandingan antara hasil positif yang benar dengan banyaknya data yang sebenarnya positif. Recall = TP/(TP+FN).
 - F1-Score adalah rata-rata harmonik dari precision dan recall, di mana nilai F1-Score yang ideal adalah 1 dan nilai terburuknya adalah 0. F1-Score yang baik mengindikasikan bahwa model memiliki precision dan recall yang baik. 
 
-Classification Report
+Classification Report Boosting
 |  | precision | recall | f1-score |
 | --- | --- | --- | --- |
 | -1 | 0.94 | 0.99 | 0.96 |
