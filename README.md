@@ -93,3 +93,5 @@ Algoritma Boosting merupakan algoritma yang terbaik pada proyek ini karena memil
 
 **---Ini adalah bagian akhir laporan---**
 
+Laporan ini disusun untuk memenuhi tugas proyek pertama Machine Learning Terapan Dicoding.
+
