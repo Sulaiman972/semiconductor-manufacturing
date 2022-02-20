@@ -42,7 +42,7 @@ Pada dataset masih terdapat kolom yang tidak diperlukan untuk membuat model terd
 
   Kemudian dalam menangani missing value, 
   - Fitur yang memiliki missing value lebih dari 20% di-drop agar model tidak keliru, dan 
-  - Mengisi missing value untuk memudahkan mesin belajar.
+  - Mengisi missing value untuk memudahkan mesin belajar. Missing value diisi dengan nilai sama dengan baris sebelumnya, kemudian apabila baris pertama kosong, diisi dengan nilai sama dengan baris setelahnya.
 
 - Pemilihan fitur.
 
@@ -61,7 +61,7 @@ Pada dataset masih terdapat kolom yang tidak diperlukan untuk membuat model terd
 
 ## Modeling
 
-Algoritma yang digunakan pada permasalahan ini adalah SVM, KNN, Random Forest, dan Boosting. Keempat algoritma tersebut merupakan algoritma yang dapat digunakan untuk melakukan klasifikasi biner. Akurasi yang didapatkan pada keempat algoritma adalah sebagai berikut:
+Algoritma yang digunakan pada permasalahan ini adalah SVM, KNN, Random Forest, dan Boosting. Keempat algoritma tersebut merupakan algoritma yang dapat digunakan untuk melakukan klasifikasi biner. Hyperparameter yang digunakan untuk pelatihan model dari setiap algoritma adalah hyperparameter default (dari sklearn). Akurasi yang didapatkan pada keempat algoritma adalah sebagai berikut:
 
 ||train_acc|test_acc|
 |---|---|---|
